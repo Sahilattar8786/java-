@@ -12,15 +12,56 @@ public class OOPS1 {
       student[] james=new student[5];
       // System.out.println(Arrays.toString(james)); null null null ....
 
-      student sahil=new student();
-        System.out.println(sahil.roll_no); // by default 0
-        System.out.println(sahil.name); // by default null
+//        student sahil =new student();
+//        System.out.println(sahil.roll_no); // by default 0
+//        System.out.println(sahil.name); // by default null
+
+//        student kunal=new student();
+//        kunal.roll_no=21;
+//        kunal.name="Kunal";
+//        kunal.marks=90;
+//        System.out.println(kunal.roll_no);
+//        System.out.println(kunal.name);
+//        System.out.println(kunal.marks);
+          student sahil = new student(13,"Sahil",90);
+          System.out.println(sahil.name);
+
 
     }
 }
 //class
+
+/*
+  Constructor - its basically defines what happens when your class object is getting created
+
+  student sahil = new student();
+  System.out.println(sahil.name); // Sahil
+ class  student{
+      int roll_no;
+      String name;
+      int marks ;
+
+      student(int rno,String getname,int Marks){
+          this.roll_no=rno;
+          this.name=getname;
+          this.marks=Marks;
+      }
+}
+
+ student sahil = new student(13,"Sahil",90);
+ System.out.println(sahil.name);
+
+
+
+*/
 class  student{
       int roll_no;
       String name;
       int marks ;
+
+      student(int rno,String getname,int Marks){
+          this.roll_no=rno;
+          this.name=getname;
+          this.marks=Marks;
+      }
 }
