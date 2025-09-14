@@ -53,6 +53,11 @@ final class Vehicle {
 
 // class Car extends Vehicle { ❌ Error: cannot inherit final class }
 
+⚡ Difference from finally and finalize
+	•	final → keyword (constant, no override, no inheritance)
+	•	finally → block in exception handling (executes always)
+	•	finalize() → method called by Garbage Collector before object is destroyed (deprecated in Java 9+)
+
 // Quick Summary
 	•	final variable → constant
 	•	final method → no overriding
