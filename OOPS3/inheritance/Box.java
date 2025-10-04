@@ -4,7 +4,7 @@ public class Box {
     double l;
     double w;
     double h;
-
+//
   Box(){
       this.l=-1;
       this.w=-1;
@@ -41,5 +41,26 @@ class BoxWeight extends Box{
       super(l,w,h);   //  super keyword is used to call parent class constructor in child class
       this.weight = weight;
   }
+  BoxWeight (double side,double weight){
+      super(side);
+      this.weight=weight;
+  }
+
+}
+
+class BoxPrice extends  BoxWeight {
+    double cost;
+    BoxPrice (){
+      super();
+      this.cost=-1;
+    }
+    BoxPrice (double l, double w , double h, double cost,double weight){
+        super(l,w,h,weight);
+        this.cost=cost;
+    }
+    BoxPrice (double side , double weight, double cost){
+        super(side,weight);
+        this.cost=cost;
+    }
 
 }
