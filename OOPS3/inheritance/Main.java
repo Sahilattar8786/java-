@@ -2,7 +2,8 @@ package OOPS3.inheritance;
 
 public class Main {
     public static void main(String[] args) {
-      Box box = new Box();
-      System.out.println(box.l+""+ box.h+""+ box.w);
+        BoxWeight box = new BoxWeight(7,2,4,5);
+        box.display();
+
     }
 }

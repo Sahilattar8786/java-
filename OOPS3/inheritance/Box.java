@@ -1,9 +1,9 @@
 package OOPS3.inheritance;
 
 public class Box {
-  double l;
-  double w;
-  double h;
+    double l;
+    double w;
+    double h;
 
   Box(){
       this.l=-1;
@@ -28,6 +28,7 @@ public class Box {
 
   public void display(){
       System.out.println("Running this box");
+      System.out.println("l="+l);
   }
 }
 
