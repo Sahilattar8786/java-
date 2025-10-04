@@ -121,3 +121,37 @@ you must call one of its constructors explicitly using super(arguments).
 4.	Every constructor automatically calls either:
 •	another constructor in the same class using this(), or
 •	a constructor in the superclass using super().
+
+## Why We Need super instead of this 
+
+Because this only refers to the current class, it cannot access:
+•	The parent’s hidden variables
+•	The parent’s overridden methods
+•	The parent’s constructors
+
+That’s where super comes in — it’s like saying:
+
+“Hey, I want to talk to my parent’s version of this.”
+
+```java 
+
+class Parent {
+    int value = 10;
+}
+
+class Child extends Parent {
+    int value = 20;
+
+    void show() {
+        System.out.println("Child value: " + this.value);  // 20
+        System.out.println("Parent value: " + super.value); // 10
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.show();
+    }
+}
+```
